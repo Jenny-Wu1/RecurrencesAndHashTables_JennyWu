@@ -21,6 +21,9 @@ public class RadixSort {
         for (int pos = maxLength - 1; pos >= 0; pos--) {
             HashMap<Character, List<String>> buckets = new HashMap<>();
 
+            for (char c = 'A'; c <= 'Z'; c++) {
+                buckets.put(c, new ArrayList<>());
+            }
             for (char c = 'a'; c <= 'z'; c++) {
                 buckets.put(c, new ArrayList<>());
             }
@@ -44,6 +47,15 @@ public class RadixSort {
                 }
             }
 
+            for (char c = 'A'; c <= 'Z'; c++) {
+                if (buckets.containsKey(c)) {
+                    for (int i = 0; i < buckets.get(c).size(); i++) {
+                        s[index] = buckets.get(c).get(i);
+                        index++;
+                    }
+                }
+            }
+
             for (char c = 'a'; c <= 'z'; c++) {
                 if (buckets.containsKey(c)) {
                     for (int i = 0; i < buckets.get(c).size(); i++) {
@@ -60,7 +72,7 @@ public class RadixSort {
         String[] s = {
                 "google", "gojo", "amazingly", "jogo", "luna", "pup", "solas",
                 "solo", "pupperino", "amaterasu", "amazon", "puppy", "hydra",
-                "amazonia", "vueltiao"
+                "amazonia", "vueltiao", "GOOGLE", "AMAZINGLY", "AMAZONIA"
         };
         radSort(s);
         System.out.println(Arrays.toString(s));
