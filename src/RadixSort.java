@@ -54,4 +54,15 @@ public class RadixSort {
             }
         }
     }
+
+
+    public static void main(String[] args) {
+        String[] s = {
+                "google", "gojo", "amazingly", "jogo", "luna", "pup", "solas",
+                "solo", "pupperino", "amaterasu", "amazon", "puppy", "hydra",
+                "amazonia", "vueltiao"
+        };
+        radSort(s);
+        System.out.println(Arrays.toString(s));
+    }
 }
