@@ -38,4 +38,12 @@ public class WordPattern {
         }
         return true;
     }
+
+    public static void main(String[] args) {
+        System.out.println(followsPattern("abba", '?', "dog?cat?cat?dog"));
+        System.out.println(followsPattern("abba", '|', "apple|banana|grape|apple"));
+        System.out.println(followsPattern("aaaa", ',', "dog,cat,cat,dog"));
+        System.out.println(followsPattern("aaaa", ' ', "ice cream taco day"));
+        System.out.println(followsPattern("adxp", ' ', "ice cream taco day"));
+    }
 }
