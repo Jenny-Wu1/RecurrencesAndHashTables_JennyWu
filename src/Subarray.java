@@ -19,4 +19,17 @@ public class Subarray {
         }
         return new int[] {-1, -1};
     }
+
+    public static void main(String[] args) {
+        int[] A = {1, 2, 3, 7, 5};
+        int K1 = 12;
+        int K2 = 5;
+        int K3 = 7;
+        int K4 = 11;
+
+        System.out.println(Arrays.toString(sumTarget(A, K1)));
+        System.out.println(Arrays.toString(sumTarget(A, K2)));
+        System.out.println(Arrays.toString(sumTarget(A, K3)));
+        System.out.println(Arrays.toString(sumTarget(A, K4)));
+    }
 }
